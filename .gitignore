@@ -1,3 +1,6 @@
 .DS_Store
 .env
 *.pt
+*.pth
+gpt2
+__pycache__
