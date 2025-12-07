@@ -4,3 +4,7 @@
 *.pth
 gpt2
 __pycache__
+data_cleaning.ipynb
+_chat.txt
+whatsapp_M_F.json
+finetune_whatsapp.ipynb
