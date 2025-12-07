@@ -3,15 +3,15 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 import tiktoken
 
-def text_to_token_ids(text, tokenizer):
+def text_to_token_ids(text, tokenizer, device="cpu"):
     # return torch.tensor(tokenizer.encode(text, allowed_special="<|endoftext|>")).unsqueeze(0)
 
     return torch.tensor(
                 tokenizer.encode(
                         text,
                         allowed_special={"<|endoftext|>"}
-                    )
-            ).unsqueeze(0)
+                    ),
+            device=device).unsqueeze(0)
 
 def token_ids_to_text(token_ids, tokenizer):
     flat = token_ids.squeeze(0)
